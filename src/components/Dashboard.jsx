@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { supabase } from "../supabase";
 
 import CountriesDashboard from './CountriesDashboard';
+import MoviesDashboard from './MovieDashboard';
 
 export default function Dashboard({ session }) {
   const [activeTab, setActiveTab] = useState('countries');
@@ -20,10 +21,10 @@ export default function Dashboard({ session }) {
       buttonActive: '#E3DBBB'
     },
     movies: {
-      background: '#141414', // Oscuro tipo Netflix
+      background: '#141414', 
       text: '#FFFFFF',
       header: '#000000',
-      buttonActive: '#BC0202' // Rojo Netflix
+      buttonActive: '#BC0202' 
     }
   };
 
@@ -56,7 +57,7 @@ export default function Dashboard({ session }) {
           </button>
         </div>
 
-        {activeTab === 'countries' ? <CountriesDashboard /> : <h2 style={{ textAlign: 'center' }}>Movies Dashboard coming soon...</h2>}
+        {activeTab === 'countries' ? <CountriesDashboard /> : <MoviesDashboard />}
       </main>
     </div>
   );

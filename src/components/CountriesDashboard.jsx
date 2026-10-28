@@ -15,7 +15,6 @@ export default function CountriesDashboard() {
   }, []);
 
   const fetchCountries = async () => {
-    // Consulta exclusiva a Supabase, sin tocar la API pública
     const { data, error } = await supabase
       .from('countries')
       .select('*')
@@ -36,7 +35,6 @@ export default function CountriesDashboard() {
   return (
     <div>
       <div style={{
-        /* MODIFICA AQUÍ: Contenedor de la barra de búsqueda y filtros (alineación y espacio) */
         display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap'
       }}>
         <input
@@ -45,7 +43,6 @@ export default function CountriesDashboard() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{
-            /* MODIFICA AQUÍ: Estilo del input de texto */
             padding: '10px', borderRadius: '6px', border: '1px solid #ccc', flex: '1', minWidth: '200px'
           }}
         />
@@ -53,7 +50,6 @@ export default function CountriesDashboard() {
           value={selectedRegion}
           onChange={(e) => setSelectedRegion(e.target.value)}
           style={{
-            /* MODIFICA AQUÍ: Estilo del selector desplegable */
             padding: '10px', borderRadius: '6px', border: '1px solid #ccc', minWidth: '150px'
           }}
         >
@@ -65,10 +61,9 @@ export default function CountriesDashboard() {
       </div>
 
       {loading ? (
-        <p style={{ textAlign: 'center', fontWeight: 'bold' /* MODIFICA AQUÍ: Texto de carga */ }}>Loading...</p>
+        <p style={{ textAlign: 'center', fontWeight: 'bold' }}>Loading...</p>
       ) : (
         <div style={{
-          /* MODIFICA AQUÍ: El grid que define cuántas tarjetas caben por fila */
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
           gap: '2rem'

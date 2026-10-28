@@ -3,7 +3,6 @@ export default function CountryCard({ country, onClick}) {
     <div
       onClick={() => onClick(country)}
       style={{
-        /* MODIFICA AQUÍ: Color de fondo, bordes, sombras y texto de la tarjeta */
         backgroundColor: '#E3DBBB',
         borderRadius: '8px',
         overflow: 'hidden',
@@ -18,9 +17,9 @@ export default function CountryCard({ country, onClick}) {
       <img 
         src={country.flag_url} 
         alt={`Flag of ${country.common_name}`} 
-        style={{ width: '100%', height: '160px', objectFit: 'cover' /* MODIFICA AQUÍ: Altura y ajuste de la bandera */ }}
+        style={{ width: '100%', height: '160px', objectFit: 'cover' }}
       />
-      <div style={{ padding: '1rem' /* MODIFICA AQUÍ: Espaciado interno de la tarjeta */ }}>
+      <div style={{ padding: '1rem' }}>
         <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.5rem' }}>{country.common_name}</h3>
         <p style={{ margin: 0, color: '#41431B', fontSize: '1rem' }}>Region: {country.region}</p>
       </div>

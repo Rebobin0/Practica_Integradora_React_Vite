@@ -9,7 +9,6 @@ export default function CountryModal({ country, onClose }) {
       padding: '1rem', zIndex: 1000
     }}>
       <div style={{
-        /* MODIFICA AQUÍ: Caja blanca del modal (color, bordes, ancho máximo) */
         backgroundColor: '#F8F3E1', color: '#41431B',
         padding: '2rem', borderRadius: '12px',
         maxWidth: '500px', width: '100%', position: 'relative'
@@ -17,7 +16,6 @@ export default function CountryModal({ country, onClose }) {
         <button
           onClick={onClose}
           style={{
-            /* MODIFICA AQUÍ: Botón de cerrar X (tamaño, posición, color) */
             position: 'absolute', top: '15px', right: '15px',
             background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', color: '#41431B'
           }}
